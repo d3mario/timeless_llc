@@ -45,7 +45,7 @@
                             <a class="nav-link" href="#">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="../public/services.php">Services</a>
+                            <a class="nav-link" href="<?php PUBLIC_PATH?>./services.php">Services</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="<?php PUBLIC_PATH?>./contact.php">Contact</a>
