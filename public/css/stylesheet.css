@@ -1,0 +1,23 @@
+footer {
+    text-align: center;
+        color: #999999;
+    padding-top: 1em;
+}
+
+.container {
+    border-bottom: solid 1px #f1f1f1;
+}
+
+.card {
+    /*border: none;*/
+}
+
+.navbar{
+    text-color: #fff;
+    background-color: #4694e2;
+}
+
+.navbar-expand-lg, a{
+    color: #fff;
+    background-color: #072c48;
+}
