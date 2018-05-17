@@ -22,7 +22,7 @@
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-dark">
-    <a class="navbar-brand" href="#">Timeless Accounting</a>
+    <a class="navbar-brand" href="<?php PUBLIC_PATH?>./index.php">Timeless Accounting</a>
     <!--<a class="navbar-brand" href="#">
         <img src="/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
         Bootstrap
@@ -39,7 +39,7 @@
             ?>
 
                         <li class="nav-item active">
-                            <a class="nav-link" href="../public/index.php">Home <span class="sr-only">(current)</span></a>
+                            <a class="nav-link" href="<?php PUBLIC_PATH?>./index.php">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">About</a>
