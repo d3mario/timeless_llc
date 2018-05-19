@@ -23,11 +23,18 @@ footer {
     text-color: #fff;
     background-color: #4694e2;
 }
-
-.navbar-expand-lg, a{
-    color: #fff;
+.navbar-expand-lg {
     background-color: #072c48;
 }
+footer a{
+    color: #fff;
+    /*background-color: #072c48;*/
+}
+
+/*footer h5 {*/
+    /*border-left: solid #fff3cd;*/
+    /*padding: .5rem;*/
+/*}*/
 .footerbackground {
     font-size: .875em;
     background-color: #0c1a1e;
