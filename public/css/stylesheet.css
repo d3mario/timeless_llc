@@ -10,8 +10,8 @@ footer {
     border-bottom: solid 1px #f1f1f1;
 }
 
-.card {
-    /*border: none;*/
+.home-card {
+    border: none;
 }
 
 .copywrite {

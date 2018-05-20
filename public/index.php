@@ -15,7 +15,7 @@ include(SHARED_PATH .'/header.php');
         <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
     </div>
     <div class="card-group">
-        <div class="card">
+        <div class="card home-card">
             <img class="card-img-top" src=".../100px180/" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">IRS Resolution</h5>
@@ -23,7 +23,7 @@ include(SHARED_PATH .'/header.php');
                 <p><a class="btn btn-primary" href="#" role="button">View details »</a></p>
             </div>
         </div>
-        <div class="card">
+        <div class="card home-card">
             <img class="card-img-top" src=".../100px180/" alt="Card image cap">
             <div class="card-body">
                 <h5 class="card-title">​Tax Preparation</h5>
