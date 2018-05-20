@@ -35,6 +35,8 @@
         </div>
 
     </div>
+</footer>
+<footer class="copywriteFooter p-md-4">
     <p class="copywrite ">&copy;<?php echo date('Y'); ?> Timless Accounting &amp; Tax Service | Website developed by: <a href="http://www.d3mario.com">DeMario </a></p>
 </footer>
 <!--Javascript Declorations: Bootstrap-->

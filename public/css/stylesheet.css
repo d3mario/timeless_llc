@@ -21,7 +21,7 @@ footer {
 
 .navbar{
     text-color: #fff;
-    background-color: #4694e2;
+    background-color: #0c1a1e;
 }
 .navbar-expand-lg {
     background-color: #072c48;
@@ -39,7 +39,13 @@ footer a{
     font-size: .875em;
     background-color: #0c1a1e;
 }
-
+.copywriteFooter {
+    text-align: center;
+    background-color: #0C1000;
+}
+.right-align-navigation{
+    flex-direction: row-reverse;
+}
 ul,li{
     padding:0;
     margin:0;
