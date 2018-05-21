@@ -20,8 +20,8 @@
 </head>
 
 <body>
-
-<nav class="navbar navbar-expand-lg navbar-dark">
+<div class="container">
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark">
     <a class="navbar-brand" href="<?php PUBLIC_PATH?>./index.php">Timeless Accounting</a>
     <!--<a class="navbar-brand" href="#">
         <img src="/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
@@ -50,3 +50,4 @@
 
     </div>
 </nav>
+</div>
