@@ -3,6 +3,11 @@
     {
         $pageTitle = 'Timeless LLC';
     }
+    $homePageTitle = 'Timeless LLC | Home';
+    $aboutPageTitle = 'Timeless LLC | About';
+    $contactPageTitle = 'Timeless LLC | Contact';
+    $servicesPageTitle = 'Timeless LLC | Services';
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -34,16 +39,16 @@
     <div class="collapse navbar-collapse justify-content-end " id="navbarSupportedContent">
         <ul class="navbar-nav nav-pills justify-content-end pr-lg-5">
             <li class="nav-item">
-            <a class="nav-link active" href="<?php PUBLIC_PATH?>./index.php">Home <span class="sr-only">(current)</span></a>
+            <a class="<?php if ($pageTitle == $homePageTitle){echo "nav-link active";}else{echo "nav-link";}  ?>" href="<?php PUBLIC_PATH?>./index.php">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="<?php PUBLIC_PATH?>./about.php">About</a>
+            <a class="<?php if ($pageTitle == $aboutPageTitle){echo "nav-link active";}else{echo "nav-link";} ?>" href="<?php PUBLIC_PATH?>./about.php">About</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="<?php PUBLIC_PATH?>./services.php">Services</a>
+            <a class="<?php if ($pageTitle == $servicesPageTitle){echo "nav-link active";}else{echo "nav-link";} ?>" href="<?php PUBLIC_PATH?>./services.php">Services</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="<?php PUBLIC_PATH?>./contact.php">Contact</a>
+            <a class="<?php if ($pageTitle == $contactPageTitle){echo "nav-link active";}else{echo "nav-link";} ?>" href="<?php PUBLIC_PATH?>./contact.php">Contact</a>
             </li>
 
         </ul>

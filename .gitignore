@@ -17,6 +17,7 @@
 _fonts/
 
 # Exclude XML sourse
+.idea/workspace.xml
 *.xml
 
 # Exclude PHP sources

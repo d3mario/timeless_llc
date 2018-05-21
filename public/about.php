@@ -1,6 +1,6 @@
 <?php
 require_once ('../private/initialize.php');
-$pageTitle = 'Timeless LLC | Home';
+$pageTitle = 'Timeless LLC | About';
 include(SHARED_PATH .'/header.php');
 
 ?>
