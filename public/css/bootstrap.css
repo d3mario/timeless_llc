@@ -8926,6 +8926,7 @@ a.text-dark:hover, a.text-dark:focus {
   }
   body {
     min-width: 992px !important;
+    padding-top: 4.5rem;
   }
   .container {
     min-width: 992px !important;

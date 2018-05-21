@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="1ed8c3e7-b6dc-49cf-af37-f9f96ce0dc8f" name="godaddy/d3mario/beta" url="http://107.180.57.8">
+        <fileTransfer host="107.180.57.8" port="21" rootFolder="/public_html/beta/timeless_llc">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

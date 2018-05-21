@@ -37,7 +37,7 @@
             <a class="nav-link active" href="<?php PUBLIC_PATH?>./index.php">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="<?php PUBLIC_PATH?>./about.php">About</a>
             </li>
             <li class="nav-item">
             <a class="nav-link" href="<?php PUBLIC_PATH?>./services.php">Services</a>
