@@ -1,5 +1,7 @@
 <?php
 
+$linkStatus = "nav-link";
+
      function getNavigation()
      {
          global $connection;
@@ -20,6 +22,41 @@
 
      }
 
+     function getNavigationLinkStatus($pageTitle)
+     {
+         $homePageTitle = 'Timeless LLC | Home';
+         $aboutPageTitle = 'Timeless LLC | About';
+         $contactPageTitle = 'Timeless LLC | Contact';
+         $servicesPageTitle = 'Timeless LLC | Services';
+        global $linkStatus;
+
+         switch ($pageTitle)
+
+         {
+
+             case 'Timeless LLC | Home':
+                 $linkStatus .= ' active';
+                 echo $linkStatus;
+                 break;
+
+             case 'Timeless LLC | About':
+                 $linkStatus .= ' active';
+                 echo $linkStatus;
+                 break;
+
+             case 'Timeless LLC | Services':
+                 $linkStatus .= ' active';
+                 echo $linkStatus;
+                 break;
+
+             case 'Timeless LLC | Contact':
+                 $linkStatus .= ' active';
+                 echo $linkStatus;
+                 break;
+         }
+
+
+     }
         function getPage($id)
         {
             global $connection;
@@ -64,6 +101,13 @@
             return $answer;
 
         }
+
+        //Function for sending emails
+
+    function sendEmailToTimeless($email, $firstName, $emailMessage)
+    {
+        echo ($email. ' '.$firstName.' '.$emailMessage);
+    }
 
 
 
