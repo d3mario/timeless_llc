@@ -12,7 +12,10 @@ require_once ('initialize.php');
 $clientEmailAddress = $_POST['clientEmailAddress'];
 $clientFirstName = $_POST['clientFirstName'];
 $clientEmailMessage = $_POST['clientEmailMessage'];
-$checkBox = $_POST['exampleCheck1'];
+print_r($_POST);
+header('Location: ../public/contact.php?clientFirstName='.$clientFirstName);
+
+//$checkBox = $_POST['exampleCheck1'];
 
 
 sendEmailToTimeless($clientEmailAddress, $clientFirstName, $clientEmailMessage);

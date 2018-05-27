@@ -106,6 +106,10 @@ $linkStatus = "nav-link";
 
     function sendEmailToTimeless($email, $firstName, $emailMessage)
     {
+        $receiver = 'DeMario <iid3mario@gmail.com>';
+        $subject = 'Test email';
+        $emailMessage .= ' First Name: '.$firstName .' Email Address: '. $email;
+        mail ($receiver, $subject, $emailMessage);
         echo ($email. ' '.$firstName.' '.$emailMessage);
     }
 
