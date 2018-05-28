@@ -5,7 +5,9 @@ define("PUBLIC_PATH", PROJECT_PATH . '/public');
 define("SHARED_PATH", PRIVATE_PATH . '/shared');
 
 include_once ('db_credentials.php');
+require_once ('queryFunctions.php');
 require_once ('functions.php');
+
 // 1. Create a database connection
 $connection = mysqli_connect(DB_SERVER, DB_USER, DB_PASS, DB_NAME);
 

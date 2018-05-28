@@ -43,7 +43,9 @@ include(SHARED_PATH .'/header.php');
                             <textarea class="form-control" name="clientEmailMessage" rows="3"></textarea>
                         </div>
                         <div class="form-check">
-                            <input type="checkbox" class="form-check-input" name="exampleCheck1">
+                            <input type="hidden" name="subscribeToNewsLetter" value="0">
+
+                            <input type="checkbox" class="form-check-input" name="subscribeToNewsLetter" value="1">
                             <label class="form-check-label" for="exampleCheck1">Subscribe to quarterly newsletter</label>
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
@@ -57,7 +59,7 @@ include(SHARED_PATH .'/header.php');
                     else
                         {
                             $name = $_GET['clientFirstName'];
-                            echo 'Thank you '. $name . ' For sendng you email';
+                            echo 'Thank you '. htmlspecialchars($name) . ' For sendng you email';
                             ?></div>
                             <?php
                         }
