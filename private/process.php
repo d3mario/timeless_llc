@@ -23,14 +23,28 @@ if(validatePostRequest())
     $clientFirstName = $_POST['clientFirstName'];
     $clientEmailMessage = $_POST['clientEmailMessage'];
     $subscribe = $_POST['subscribeToNewsLetter'];
-//   print_r($_POST);
-//   die();
-    sendEmailToTimeless($clientEmailAddress, $clientFirstName, $clientEmailMessage);
-    if ($subscribe === '1')
+    //$subscribe = 1;
+    //sendEmailToTimeless($clientEmailAddress, $clientFirstName, $clientEmailMessage);
+    switch($subscribe)
     {
-        urlencode(setClient($clientFirstName, $clientEmailAddress, $subscribe));
+        case 0:
+            //print_r($_POST);
+            $success = sendEmailToTimeless($clientFirstName, $clientEmailAddress, $clientEmailMessage);
+            redirect('../public/contact.php?clientFirstName='.urlencode($clientFirstName).'&success='.urlencode($success));
+            //die();
+            break;
+
+        case 1:
+            //print_r($_POST);
+            $addedToSubscription = urlencode(setClient($clientFirstName, $clientEmailAddress, $subscribe));
+            $success = sendEmailToTimeless($clientFirstName, $clientEmailAddress, $clientEmailMessage);
+
+            //die();
+            redirect('../public/contact.php?clientFirstName='.urlencode($clientFirstName).'&subscribe='.urlencode($addedToSubscription).'&success='.urlencode($success));
     }
-    redirect('../public/contact.php?clientFirstName='.urlencode($clientFirstName));
+
+
+
 }
 else {
     redirect('../public/contact.php');

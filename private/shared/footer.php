@@ -2,13 +2,13 @@
 </div><!-- content container -->
 <footer class="footerbackground p-md-4">
     <!-- Stack the columns on mobile by making one full-width and the other half-width -->
-    <div class="row">
-        <div class="col-md-4 col-sm-6 footer-col">
+    <div class="row justify-content-center">
+        <div class="col-sm pl-5 footer-col">
             <h5>Timeless Accounting &amp; Tax Services</h5>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.</p>
 
         </div>
-        <div class="col-md-4 col-sm-6 footer-col">
+        <div class="col-sm pl-5  footer-col">
             <h5>Contact Us</h5>
             <ul class="list-unstyled quick-links">
                 <li><a href="javascript:void();"><i class="fa fa-map-pin"></i>28865 Plymouth Rd.. Livonia, MI 48150</a></li>
@@ -23,7 +23,7 @@
                 <li><i class="fa fa-google-plus social-icon google" aria-hidden="true"></i></li>
             </ul>
         </div>
-        <div class="col-md-4 col-sm-6 footer-col"><h5>Latest Post</h5>
+        <div class="col-sm pl-5  footer-col"><h5>Latest Post</h5>
             <ul class="list-unstyled quick-links">
                 <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Home</a></li>
                 <li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>About</a></li>

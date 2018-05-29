@@ -16,7 +16,8 @@ function setClient($clientFirstName, $clientEmail, $subscribeToQuarterlyNewsLett
 
     if ($result)
     {
-
+        $success = 'you are now registered';
+        return $success;
     }
     else
     {

@@ -12,7 +12,8 @@ $linkStatus = "nav-link";
         $subject = 'Test email';
         $emailMessage .= ' First Name: '.$firstName .' Email Address: '. $email;
         mail ($receiver, $subject, $emailMessage);
-//        echo ($email. ' '.$firstName.' '.$emailMessage);
+        $success = 'Email was sent successfully';
+        return $success;
     }
 
     // Checks to see if the request was made from a post request.
