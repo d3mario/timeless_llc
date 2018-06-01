@@ -6,7 +6,7 @@
 // Credentials
 $dbhost = 'localhost';
 $dbuser = 'root';
-$dbpass = 'allNight1';
+$dbpass = '';
 $dbname = 'timeless_llc_website';
 
 // 1. Create a database connection
