@@ -19,6 +19,8 @@ _fonts/
 # Exclude XML sourse
 .idea/workspace.xml
 *.xml
+.DS_Store
+
 
 # Exclude PHP sources
 db_connect_guide.php
