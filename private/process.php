@@ -17,37 +17,37 @@ require_once ('initialize.php');
  *  pass $clientEmailAddress, $clientFirstName, $clientEmailMessage to sendEmailToTimeLess function so the email can be sent.
  *  redirect the end user back to the contact page with the $clientFirstName so it can be used on the contact page.
  */
-if(validatePostRequest())
+$clientEmailAddress = $_POST['clientEmailAddress'];
+$clientFirstName = $_POST['clientFirstName'];
+$isvalid = validateContactForm($clientEmailAddress, $clientFirstName);
+
+if(validatePostRequest()&& $isvalid)
 {
-    $clientEmailAddress = $_POST['clientEmailAddress'];
-    $clientFirstName = $_POST['clientFirstName'];
     $clientEmailMessage = $_POST['clientEmailMessage'];
     $subscribe = $_POST['subscribeToNewsLetter'];
-    //$subscribe = 1;
-    //sendEmailToTimeless($clientEmailAddress, $clientFirstName, $clientEmailMessage);
-    switch($subscribe)
-    {
-        case 0:
-            //print_r($_POST);
-            $success = sendEmailToTimeless($clientFirstName, $clientEmailAddress, $clientEmailMessage);
-            redirect('../public/contact.php?clientFirstName='.urlencode($clientFirstName).'&success='.urlencode($success));
-            //die();
-            break;
+//    print_r($isvalid);
 
-        case 1:
-            //print_r($_POST);
-            $addedToSubscription = urlencode(setClient($clientFirstName, $clientEmailAddress, $subscribe));
-            $success = sendEmailToTimeless($clientFirstName, $clientEmailAddress, $clientEmailMessage);
+        switch($subscribe)
+        {
+            case 0:
+//                print_r($_POST);
+                $success = sendEmailToTimeless($clientFirstName, $clientEmailAddress, $clientEmailMessage);
+                redirect('../public/contact.php?clientFirstName='.urlencode($clientFirstName).'&success='.urlencode($success));
+                //die();
+                break;
 
-            //die();
-            redirect('../public/contact.php?clientFirstName='.urlencode($clientFirstName).'&subscribe='.urlencode($addedToSubscription).'&success='.urlencode($success));
-    }
+            case 1:
+//                print_r($_POST);
+                $addedToSubscription = urlencode(setClient($clientFirstName, $clientEmailAddress, $subscribe));
+                $success = sendEmailToTimeless($clientFirstName, $clientEmailAddress, $clientEmailMessage);
 
-
-
+                //die();
+                redirect('../public/contact.php?clientFirstName='.urlencode($clientFirstName).'&subscribe='.urlencode($addedToSubscription).'&success='.urlencode($success));
+        }
 }
 else {
-    redirect('../public/contact.php');
+    $invalidRequest = "Invalid request, please make sure you enter your name and a valid email address";
+    redirect('../public/contact.php?invalidRequest='.urlencode($invalidRequest));
 }
 
 

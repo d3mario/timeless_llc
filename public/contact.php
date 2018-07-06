@@ -1,6 +1,8 @@
 <?php
 require_once ('../private/initialize.php');
 $pageTitle = 'Timeless LLC | Contact';
+$invalid = '';
+
 
 include(SHARED_PATH .'/header.php');
 
@@ -21,22 +23,23 @@ include(SHARED_PATH .'/header.php');
     <div class="row featurette">
         <div class="col-md-7">
             <?php
-                if (!isset($_GET['clientFirstName']))
+                if (!isset($_GET['clientFirstName']) )
                     {
+
 
             ?>
                     <h2 class="featurette-heading">Partnership <span class="text-muted">Tax Preparation.</span></h2>
                     <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper.
                     </p>
-                    <form method= "post" name="timeless_accounting_contact" action='../private/process.php'>
+            <form method= "post" name="timeless_accounting_contact" action='../private/process.php' >
                         <div class="form-group">
                             <label for="exampleInputEmail1">Email address:</label>
-                            <input type="email" class="form-control" name="clientEmailAddress"aria-describedby="emailHelp" placeholder="Enter email">
+                            <input type="email" class="form-control" name="clientEmailAddress"aria-describedby="emailHelp" placeholder="Enter email" rel="js-clientEmailAddress">
                             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                         </div>
                         <div class="form-group">
                             <label for="clientsFirstName">First Name:</label>
-                            <input type="text" class="form-control" name="clientFirstName" placeholder="Enter first name">
+                            <input type="text" class="form-control" name="clientFirstName" placeholder="Enter first name" rel="js-clientFirstName">
                         </div>
                         <div class="form-group">
                             <label for="clientsEmailMessage">Message:</label>
@@ -56,13 +59,20 @@ include(SHARED_PATH .'/header.php');
                 </div>
                         <?php
                     }
-                    else
-                        {
+                    elseif (isset($_GET['clientFirstName']))
+                    {
                             $name = $_GET['clientFirstName'];
                             echo 'Thank you '. htmlspecialchars($name) . ' For sendng you email';
                             ?></div>
                             <?php
                         }
+else
+{
+    $invalid = $_GET['invalidRequest'];
+    echo 'Error '. htmlspecialchars($invalid) ;
+    ?></div>
+    <?php
+}
                     ?>
 
 

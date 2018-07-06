@@ -33,5 +33,40 @@ $linkStatus = "nav-link";
         header('Location:'.$url);
     }
 
+    function validateContactForm($firstName, $email)
+    {
+        if (sanitizeEmailAddress($email)&& sanitizeFirstName($firstName) !=0)
+        {
+            return (1);
+        }
+        else{
+            return (0);
+        }
+    }
+
+    function sanitizeEmailAddress($email)
+    {
+        $sanitizedEmail = filter_var($email, FILTER_SANITIZE_EMAIL);
+        if (strlen($sanitizedEmail) !=0 )
+        {
+            return 1;
+        }
+        else {
+            return 0;
+        }
+    }
+
+    function sanitizeFirstName($firstName)
+    {
+        $sanitizedFirstName = filter_var($firstName, FILTER_SANITIZE_STRING);
+        if (strlen($sanitizedFirstName) !=0 )
+        {
+            return 1;
+        }
+        else {
+            return 0;
+        }
+    }
+
 
 ?>
