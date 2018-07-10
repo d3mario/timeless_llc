@@ -42,7 +42,7 @@
 <!--Javascript Declorations: Bootstrap-->
 <script src="../public/js/jquery.slim.min.js"></script>
 <script src="../public/js/bootstrap.min.js"></script>
-<!--<script src="../public/js/scripts.js"></script>-->
+<script src="../public/js/scripts.js"></script>
 <script src="../public/js/bootstrap.js"></script>
 <script src="../public/js/jquery.js"></script>
 <script src="../public/js/popper.min.js"></script>

@@ -21,7 +21,7 @@ $clientEmailAddress = $_POST['clientEmailAddress'];
 $clientFirstName = $_POST['clientFirstName'];
 $isvalid = validateContactForm($clientEmailAddress, $clientFirstName);
 
-if(validatePostRequest()&& $isvalid)
+if(validatePostRequest())
 {
     $clientEmailMessage = $_POST['clientEmailMessage'];
     $subscribe = $_POST['subscribeToNewsLetter'];

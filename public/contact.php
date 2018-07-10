@@ -31,7 +31,7 @@ include(SHARED_PATH .'/header.php');
                     <h2 class="featurette-heading">Partnership <span class="text-muted">Tax Preparation.</span></h2>
                     <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper.
                     </p>
-            <form method= "post" name="timeless_accounting_contact" action='../private/process.php' >
+            <form method= "post" name="timeless_accounting_contact" action='../private/process.php' onsubmit="return validateContactForm()">
                         <div class="form-group">
                             <label for="exampleInputEmail1">Email address:</label>
                             <input type="email" class="form-control" name="clientEmailAddress"aria-describedby="emailHelp" placeholder="Enter email" rel="js-clientEmailAddress">
@@ -40,10 +40,12 @@ include(SHARED_PATH .'/header.php');
                         <div class="form-group">
                             <label for="clientsFirstName">First Name:</label>
                             <input type="text" class="form-control" name="clientFirstName" placeholder="Enter first name" rel="js-clientFirstName">
+                            <small id="firstNameHelp" class="form-text text-muted"></small>
                         </div>
                         <div class="form-group">
                             <label for="clientsEmailMessage">Message:</label>
-                            <textarea class="form-control" name="clientEmailMessage" rows="3"></textarea>
+                            <textarea class="form-control" name="clientEmailMessage" rows="3" rel="js-clientEmailMessage"></textarea>
+                            <small id="emailMessageHelp" class="form-text text-muted"></small>
                         </div>
                         <div class="form-check">
                             <input type="hidden" name="subscribeToNewsLetter" value="0">

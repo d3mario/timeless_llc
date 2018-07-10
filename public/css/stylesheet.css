@@ -34,6 +34,16 @@ footer a{
     /*background-color: #072c48;*/
 }
 
+.form-validation-input{
+    border-color: #0b97c4;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #0b97c4;
+}
+
+.form-validation-alert-text{
+    color: red !important;
+}
+
 /*footer h5 {*/
     /*border-left: solid #fff3cd;*/
     /*padding: .5rem;*/
