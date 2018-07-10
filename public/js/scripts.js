@@ -5,6 +5,15 @@ $(function()
 
 });
 
+/**
+ *
+ *
+ * @param emailInput input form for clients email addree
+ * @param $firstNameInput input form for clients firstName
+ * @param clientFirstName stores the value entered in the $firstNameInput
+ * @param clientEmail stores the value entered in the emailInput
+ * @returns {boolean}
+ */
 function validateContactForm(){
     var $emailInput = $("[rel=js-clientEmailAddress]");
     var $firstNameInput = $("[rel=js-clientFirstName]");
